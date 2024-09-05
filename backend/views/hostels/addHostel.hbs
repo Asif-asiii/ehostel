@@ -36,11 +36,25 @@
         <label for="attachments">Attachments:</label>
         <input type="file" id="attachments" name="attachments"><br><br>
 
+       <div class="form-group">
         <label for="selectAdmin">Select Admin:</label>
-        <input type="text" id="selectAdmin" name="selectAdmin"><br><br>
+        <select name="selectAdmin" id="selectAdmin" class="form-control">
+            <option value="disabled selected">Select Admin</option>
+            {{#each admins}}
+                <option value="{{this._id}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
 
-        <label for="selectWardens">Select Wardens:</label>
-        <input type="text" id="selectWardens" name="selectWardens"><br><br>
+    <div class="form-group">
+        <label for="selectWardens">Select Warden:</label>
+        <select name="selectWardens" id="selectWardens" class="form-control">
+            <option value="disabled selected">Select Warden</option>
+            {{#each wardens}}
+                <option value="{{this._id}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
 
         <button type="submit">Add Hostel</button>
     </form>

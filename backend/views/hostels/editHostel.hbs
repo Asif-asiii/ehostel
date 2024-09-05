@@ -37,10 +37,18 @@
         <input type="file" id="attachments" name="attachments"><br>
 
         <label for="selectAdmin">Select Admin:</label>
-        <input type="text" id="selectAdmin" name="selectAdmin" value="{{hostel.selectAdmin}}"><br>
+    <select id="selectAdmin" name="selectAdmin">
+        {{#each admins}}
+            <option value="{{this._id}}" {{#ifEquals this._id ../hostel.selectAdmin}}selected{{/ifEquals}}>{{this.employeeName}}</option>
+        {{/each}}
+    </select><br><br>
 
-        <label for="selectWardens">Select Wardens:</label>
-        <input type="text" id="selectWardens" name="selectWardens" value="{{hostel.selectWardens}}"><br>
+    <label for="selectWardens">Select Wardens:</label>
+    <select id="selectWardens" name="selectWardens" multiple>
+        {{#each wardens}}
+            <option value="{{this._id}}" {{#ifInArray this._id ../hostel.selectWardens}}selected{{/ifInArray}}>{{this.employeeName}}</option>
+        {{/each}}
+    </select><br><br>
 
         <button type="submit">Update Hostel</button>
     </form>
