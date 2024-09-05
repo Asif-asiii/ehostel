@@ -124,7 +124,7 @@ const AddHostelForm = () => {
             </select>
           </div>
         </div>
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200" onClick={handleSubmit}>Add Hostel</button>
+        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200" onSubmit={handleSubmit}>Add Hostel</button>
       </form>
     </div>
   );
