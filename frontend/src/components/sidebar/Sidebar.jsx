@@ -62,22 +62,22 @@ const Sidebar = () => {
 
       {/* Sidebar items */}
       <div className="flex flex-col space-y-2">
-        <Link to="/hostels" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/hostels" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilBuilding />}</span> Hostels
         </Link>
-        <Link to="/rooms" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/rooms" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilBedDouble />}</span> Rooms
         </Link>
-        <Link to="/beds" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/beds" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilBed />}</span> Beds
         </Link>
-        <Link to="/tenants" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/tenants" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilUserCircle />}</span> Tenants
         </Link>
-        <Link to="/bookings" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/bookings" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilBookMedical />}</span> Bookings
         </Link>
-        <Link to="/services" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/services" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilSetting />}</span> Services
         </Link>
 
@@ -85,19 +85,19 @@ const Sidebar = () => {
         <div className="relative">
           <button
             onClick={toggleDropdown}
-            className="flex items-center justify-between w-full p-2 bg-gray-700 hover:bg-gray-600 rounded"
+            className="flex items-center justify-between w-full p-2 bg-gray-400 hover:bg-gray-400 rounded"
             aria-expanded={isOpen}
           >
             {selectedOption} <UilAngleDown />
           </button>
           {isOpen && (
-            <ul className="absolute left-0 w-full bg-gray-700 mt-1 rounded shadow-lg z-10">
+            <ul className="absolute left-0 w-full bg-gray-400 mt-1 rounded shadow-lg z-10">
               {options.map((option, index) => (
                 <li key={index}>
                   <Link
                     to={option.path}
                     onClick={() => handleOptionClick(option)}
-                    className="flex items-center p-2 hover:bg-gray-600"
+                    className="flex items-center p-2 hover:bg-gray-300"
                   >
                     <span className="mr-2">{option.icon}</span>
                     {option.label}
@@ -108,31 +108,31 @@ const Sidebar = () => {
           )}
         </div>
 
-        <Link to="/stock/statuses" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/stock/statuses" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilFolderOpen />}</span> Stock Statuses
         </Link>
-        <Link to="/stock/demands" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/stock/demands" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilPlusCircle />}</span> Stock Demands
         </Link>
-        <Link to="/petty/cash" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/petty/cash" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilMoneyBill />}</span> Petty Cash
         </Link>
-        <Link to="/cash/register" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/cash/register" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilBook />}</span> Cash Register
         </Link>
-        <Link to="/tenant/report" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/tenant/report" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilFileGraph />}</span> Tenant Report
         </Link>
-        <Link to="/hrm" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/hrm" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<Uil0Plus />}</span> HRM
         </Link>
-        <Link to="/bank/accounts" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/bank/accounts" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilUniversity />}</span> Bank Accounts
         </Link>
-        <Link to="/units" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/units" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilPathfinderUnite />}</span> Units
         </Link>
-        <Link to="/management/user" className="flex items-center p-2 hover:bg-gray-700 rounded">
+        <Link to="/management/user" className="flex items-center p-2 hover:bg-gray-400 rounded">
           <span className="mr-2">{<UilUserSquare />}</span> Management Users
         </Link>
       </div>

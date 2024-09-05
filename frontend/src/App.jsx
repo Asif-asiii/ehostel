@@ -22,6 +22,13 @@ import Units from './pages/units/Units';
 import ManagementUser from './pages/management-user/ManagementUser';
 import Navbar from './components/navbar/Navbar';
 import AddHostel from './pages/hostels/AddHostel';
+import AddRoomTable from './pages/rooms/AddRoomTable';
+import AddBedForm from './pages/beds/AddBedForm';
+import AddTenant from './pages/tenants/AddTenant';
+import AddBooking from './pages/bookings/AddBooking';
+import ServiceForm from './pages/services/ServiceForm';
+import HostelExpenseForm from './pages/hostel-expenses/HostelExpenseForm';
+import StockStatusesForm from './pages/stock-statuses/StockStatusesForm';
 const App = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -72,6 +79,13 @@ const App = () => {
           <Route path="/units" element={<Units />} />
           <Route path="/management/user" element={<ManagementUser />} />
           <Route path='/add/hostel' element={<AddHostel />} />
+          <Route path='/add/room' element={<AddRoomTable />} />
+          <Route path='/add/bed' element={<AddBedForm/>} />
+          <Route path='/add/tenant' element={<AddTenant />} />
+          <Route path='/add/booking' element={<AddBooking/>} />
+          <Route path='/add/service' element={<ServiceForm />} />
+        <Route path='/add/hostel/expenseform' element={<HostelExpenseForm/>} />
+        <Route path='/add/stock/status' element={<StockStatusesForm/>} />
         </Routes>
       </div>
     </div>
