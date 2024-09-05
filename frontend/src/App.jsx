@@ -23,6 +23,8 @@ import ManagementUser from './pages/management-user/ManagementUser';
 import Navbar from './components/navbar/Navbar';
 import AddHostel from './pages/hostels/AddHostel';
 import AddRoomTable from './pages/rooms/AddRoomTable';
+import AddBedForm from './pages/beds/AddBedForm';
+import AddTenant from './pages/tenants/AddTenant';
 const App = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -74,6 +76,8 @@ const App = () => {
           <Route path="/management/user" element={<ManagementUser />} />
           <Route path='/add/hostel' element={<AddHostel />} />
           <Route path='/add/room' element={<AddRoomTable />} />
+          <Route path='/add/bed' element={<AddBedForm/>} />
+          <Route path='/add/tenant' element={<AddTenant />} />
         </Routes>
       </div>
     </div>
