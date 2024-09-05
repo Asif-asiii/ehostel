@@ -25,7 +25,7 @@ const AddBedForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-lg">
+    <div className="max-w-lg mx-auto p-8 bg-[#f0f0f0] shadow-lg rounded-lg">
       <h2 className="text-2xl font-bold text-center mb-6">Add New Bed</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Bed Title */}

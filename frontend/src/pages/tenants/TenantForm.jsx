@@ -31,7 +31,7 @@ const TenantForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-8 bg-white shadow-lg rounded-lg mt-5">
+    <div className="max-w-2xl mx-auto p-8 bg-[#F0F0F0] shadow-lg rounded-lg mt-5">
       <h2 className="text-2xl font-bold text-center mb-6">Tenant Information</h2>
       
       <form onSubmit={handleSubmit} className="space-y-6">

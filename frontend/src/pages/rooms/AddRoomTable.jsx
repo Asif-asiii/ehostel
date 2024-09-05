@@ -41,7 +41,7 @@ const AddRoomTable = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg mt-10">
+    <div className="max-w-4xl mx-auto p-8 bg-[#f0f0f0] shadow-lg rounded-lg mt-10">
       <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">Add Room Details</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
