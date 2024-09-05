@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Hostel</title>
+</head>
+<body>
+    <h1>Edit Hostel</h1>
+    <form action="/hostels/edit/{{hostel._id}}" method="POST" enctype="multipart/form-data">
+        <label for="hostelName">Hostel Name:</label>
+        <input type="text" id="hostelName" name="hostelName" value="{{hostel.hostelName}}" required><br>
+
+        <label for="landLineNumber">Landline Number:</label>
+        <input type="text" id="landLineNumber" name="landLineNumber" value="{{hostel.landLineNumber}}" required><br>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="text" id="mobileNumber" name="mobileNumber" value="{{hostel.mobileNumber}}" required><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" value="{{hostel.address}}" required><br>
+
+        <label for="googleMap">Google Map:</label>
+        <input type="text" id="googleMap" name="googleMap" value="{{hostel.googleMap}}"><br>
+
+        <label for="websiteAddress">Website Address:</label>
+        <input type="text" id="websiteAddress" name="websiteAddress" value="{{hostel.websiteAddress}}"><br>
+
+        <label for="socialMedia">Social Media:</label>
+        <input type="text" id="socialMedia" name="socialMedia" value="{{hostel.socialMedia}}"><br>
+
+        <label for="hostelFor">Hostel For:</label>
+        <input type="text" id="hostelFor" name="hostelFor" value="{{hostel.hostelFor}}" required><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" value="{{hostel.email}}" required><br>
+
+        <label for="attachments">Attachments:</label>
+        <input type="file" id="attachments" name="attachments"><br>
+
+        <label for="selectAdmin">Select Admin:</label>
+        <input type="text" id="selectAdmin" name="selectAdmin" value="{{hostel.selectAdmin}}"><br>
+
+        <label for="selectWardens">Select Wardens:</label>
+        <input type="text" id="selectWardens" name="selectWardens" value="{{hostel.selectWardens}}"><br>
+
+        <button type="submit">Update Hostel</button>
+    </form>
+</body>
+</html>

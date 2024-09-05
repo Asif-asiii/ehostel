@@ -1,0 +1,65 @@
+<form action="/bookings/edit/{{booking._id}}" method="POST">
+    <h3>Edit Booking</h3>
+    
+    <div>
+        <label>Rent Type:</label>
+        <input type="radio" name="rentType" value="Daily" {{#if (eq booking.rentType "Daily")}}checked{{/if}}> Daily
+        <input type="radio" name="rentType" value="Monthly" {{#if (eq booking.rentType "Monthly")}}checked{{/if}}> Monthly
+    </div>
+    
+    <div>
+        <label>Select Tenant:</label>
+        <select name="tenant">
+            {{#each tenants}}
+            <option value="{{this._id}}" {{#if (eq this._id ../booking.tenant)}}selected{{/if}}>{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+    
+    <div>
+        <label>Select Room:</label>
+        <select name="room">
+            {{#each rooms}}
+            <option value="{{this._id}}" {{#if (eq this._id ../booking.room)}}selected{{/if}}>{{this.room}}</option>
+            {{/each}}
+        </select>
+    </div>
+    
+    <div>
+        <label>Select Bed:</label>
+        <select name="bed">
+            {{#each beds}}
+            <option value="{{this._id}}" {{#if (eq this._id ../booking.bed)}}selected{{/if}}>{{this.bedNumber}}</option>
+            {{/each}}
+        </select>
+    </div>
+    
+    <h3>Services</h3>
+    
+    <div>
+        <label>Security:</label>
+        <input type="number" name="security" value="{{booking.security}}" required>
+    </div>
+    
+    <div>
+        <label>Monthly Rent:</label>
+        <input type="number" name="monthlyRent" value="{{booking.monthlyRent}}" required>
+    </div>
+    
+    <div>
+        <label>Check-In Date:</label>
+        <input type="date" name="checkInDate" value="{{formatDate booking.checkInDate 'YYYY-MM-DD'}}" required>
+    </div>
+    
+    <div>
+        <label>Check-Out Date:</label>
+        <input type="date" name="checkOutDate" value="{{formatDate booking.checkOutDate 'YYYY-MM-DD'}}">
+    </div>
+    
+    <div>
+        <label>Remarks:</label>
+        <textarea name="remarks">{{booking.remarks}}</textarea>
+    </div>
+    
+    <button type="submit">Update Booking</button>
+</form>

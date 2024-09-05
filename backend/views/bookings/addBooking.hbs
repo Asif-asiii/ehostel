@@ -1,0 +1,56 @@
+<form action="/bookings/add" method="POST">
+
+    <h3>Booking Details</h3>
+    <div>
+        <label>Rent Type:</label>
+        <input type="radio" name="rentType" value="Daily"> Daily
+        <input type="radio" name="rentType" value="Monthly"> Monthly
+    </div>
+    <div>
+        <label>Select Tenant:</label>
+        <select name="tenant">
+            {{#each tenants}}
+            <option value="{{this._id}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <br>
+    <div>
+        <label>Select Room:</label>
+        <select name="room">
+            {{#each rooms}}
+            <option value="{{this._id}}">{{this.room}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div>
+        <label>Select Bed:</label>
+        <select name="bed">
+            {{#each beds}}
+            <option value="{{this._id}}">{{this.bedNumber}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <h3>Services</h3>
+    <div>
+        <label>Security:</label>
+        <input type="number" name="security" required>
+    </div>
+    <div>
+        <label>Monthly Rent:</label>
+        <input type="number" name="monthlyRent" required>
+    </div>
+    <div>
+        <label>Check-In Date:</label>
+        <input type="date" name="checkInDate" required>
+    </div>
+    <div>
+        <label>Check-Out Date:</label>
+        <input type="date" name="checkOutDate">
+    </div>
+    <div>
+        <label>Remarks:</label>
+        <textarea name="remarks"></textarea>
+    </div>
+    <button type="submit">Add Booking</button>
+</form>
