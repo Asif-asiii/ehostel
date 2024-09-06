@@ -29,6 +29,7 @@ import AddBooking from './pages/bookings/AddBooking';
 import ServiceForm from './pages/services/ServiceForm';
 import HostelExpenseForm from './pages/hostel-expenses/HostelExpenseForm';
 import StockStatusesForm from './pages/stock-statuses/StockStatusesForm';
+import StockDemandsForm from './pages/stock-demands/StockDemandsForm';
 const App = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -86,6 +87,7 @@ const App = () => {
           <Route path='/add/service' element={<ServiceForm />} />
         <Route path='/add/hostel/expenseform' element={<HostelExpenseForm/>} />
         <Route path='/add/stock/status' element={<StockStatusesForm/>} />
+        <Route path='/add/stock/demand' element={<StockDemandsForm/>} />
         </Routes>
       </div>
     </div>

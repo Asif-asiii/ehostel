@@ -23,9 +23,9 @@ const Navbar = ({ toggleSideBar, isDarkMode, toggleDarkMode }) => {
       }`}
     >
       {/* Left Side: Hamburger & Search Bar */}
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4 ">
         {/* Hamburger Icon */}
-        <button className={isDarkMode ? 'text-white' : 'text-black'} onClick={toggleSideBar}>
+        <button className={isDarkMode ? 'text-white' : 'text-black'} onClick={toggleSideBar} id="hamburger">
           <UilBars size="24" />
         </button>
         {/* Search Bar */}
@@ -51,7 +51,7 @@ const Navbar = ({ toggleSideBar, isDarkMode, toggleDarkMode }) => {
       
         {/* Profile Icon */}
         <div className="relative">
-          <button onClick={toggleNote} className={isNote ? 'text-white focus:outline-none' : 'text-black focus:outline-none'}>
+          <button onClick={toggleNote} className={isNote ? 'text-white focus:outline-none' : 'text-black focus:outline-none'} id="epat">
             <UilEdit size="24" />
           </button>
           {/* Dropdown */}
@@ -79,7 +79,7 @@ const Navbar = ({ toggleSideBar, isDarkMode, toggleDarkMode }) => {
           )}
         </div>
         <div className="relative">
-          <button onClick={toggleDropdown} className={isDarkMode ? 'text-white focus:outline-none' : 'text-black focus:outline-none'}>
+          <button onClick={toggleDropdown} className={isDarkMode ? 'text-white focus:outline-none' : 'text-black focus:outline-none'} id="epat">
             <UilUser size="24" />
           </button>
           {/* Dropdown */}

@@ -30,7 +30,7 @@ const AddBedForm = () => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Bed Title */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">Bed Title</label>
+          <label className="block text-sm font-medium text-[#665429]">Bed Title</label>
           <input 
             type="text" 
             name="bedTitle" 
@@ -44,7 +44,7 @@ const AddBedForm = () => {
 
         {/* Bed Number */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">Bed Number</label>
+          <label className="block text-sm font-medium text-[#665429]">Bed Number</label>
           <input 
             type="number" 
             name="bedNumber" 
@@ -58,7 +58,7 @@ const AddBedForm = () => {
 
         {/* Select Room (Dropdown with dummy data) */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">Select Room</label>
+          <label className="block text-sm font-medium text-[#665429]">Select Room</label>
           <select 
             name="room" 
             value={formData.room} 
@@ -75,7 +75,7 @@ const AddBedForm = () => {
 
         {/* Monthly Rent */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">Monthly Rent</label>
+          <label className="block text-sm font-medium text-[#665429]">Monthly Rent</label>
           <input 
             type="number" 
             name="monthlyRent" 
@@ -89,7 +89,7 @@ const AddBedForm = () => {
 
         {/* Security Amount */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">Security Amount</label>
+          <label className="block text-sm font-medium text-[#665429]">Security Amount</label>
           <input 
             type="number" 
             name="securityAmount" 
@@ -103,7 +103,7 @@ const AddBedForm = () => {
 
         {/* Bed Status (Radio Buttons) */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">Bed Status</label>
+          <label className="block text-sm font-medium text-[#665429]">Bed Status</label>
           <div className="mt-2 space-y-2">
             <label className="inline-flex items-center">
               <input 
@@ -132,7 +132,7 @@ const AddBedForm = () => {
 
         {/* Remarks */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">Remarks</label>
+          <label className="block text-sm font-medium text-[#665429]">Remarks</label>
           <textarea 
             name="remarks" 
             value={formData.remarks} 

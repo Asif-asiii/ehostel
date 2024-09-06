@@ -23,38 +23,41 @@ const EmergencyForm = () => {
       <h2 className="text-2xl font-bold text-center mb-6">Emergency Information</h2>
       
       <form onSubmit={handleEmergencySubmit} className="space-y-6">
-        {/* Emergency Contact Name */}
-        <div>
-          <label className="block text-sm font-medium">Emergency Contact Name</label>
-          <input 
-            type="text" 
-            name="emergencyContactName" 
-            value={emergencyData.emergencyContactName} 
-            onChange={handleEmergencyChange} 
-            className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
-            placeholder="Enter emergency contact name" 
-            required 
-          />
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Emergency Contact Name */}
+          <div>
+            <label className="block text-sm font-medium">Emergency Contact Name</label>
+            <input 
+              type="text" 
+              name="emergencyContactName" 
+              value={emergencyData.emergencyContactName} 
+              onChange={handleEmergencyChange} 
+              className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
+              placeholder="Enter emergency contact name" 
+              required 
+            />
+          </div>
 
-        {/* Emergency Contact Number */}
-        <div>
-          <label className="block text-sm font-medium">Emergency Contact Number</label>
-          <input 
-            type="text" 
-            name="emergencyContactNumber" 
-            value={emergencyData.emergencyContactNumber} 
-            onChange={handleEmergencyChange} 
-            className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
-            placeholder="Enter emergency contact number" 
-            required 
-          />
+          {/* Emergency Contact Number */}
+          <div>
+            <label className="block text-sm font-medium">Emergency Contact Number</label>
+            <input 
+              type="text" 
+              name="emergencyContactNumber" 
+              value={emergencyData.emergencyContactNumber} 
+              onChange={handleEmergencyChange} 
+              className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
+              placeholder="Enter emergency contact number" 
+              required 
+            />
+          </div>
         </div>
 
         {/* Submit Button */}
-       {/*} <button type="submit" className="mt-4 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+        {/* Uncomment if you want to use the submit button */}
+        {/* <button type="submit" className="mt-4 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
           Add Emergency Contact
-  </button>*/}
+        </button> */}
       </form>
     </div>
   );

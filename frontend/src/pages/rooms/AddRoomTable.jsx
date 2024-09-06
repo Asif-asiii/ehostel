@@ -42,11 +42,11 @@ const AddRoomTable = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-8 bg-[#f0f0f0] shadow-lg rounded-lg mt-10">
-      <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">Add Room Details</h2>
+      <h2 className="text-3xl font-semibold text-[#665429] mb-6 text-center">Add Room Details</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="hostel" className="block text-sm font-medium text-gray-700">Hostel</label>
+            <label htmlFor="hostel" className="block text-sm font-medium text-[#665429]">Hostel</label>
             <select
               name="hostel"
               value={roomData.hostel}
@@ -61,7 +61,7 @@ const AddRoomTable = () => {
           </div>
 
           <div>
-            <label htmlFor="floor" className="block text-sm font-medium text-gray-700">Floor</label>
+            <label htmlFor="floor" className="block text-sm font-medium text-[#665429]">Floor</label>
             <input
               type="number"
               name="floor"
@@ -73,7 +73,7 @@ const AddRoomTable = () => {
           </div>
 
           <div>
-            <label htmlFor="room" className="block text-sm font-medium text-gray-700">Room</label>
+            <label htmlFor="room" className="block text-sm font-medium text-[#665429]">Room</label>
             <input
               type="text"
               name="room"
@@ -85,7 +85,7 @@ const AddRoomTable = () => {
           </div>
 
           <div>
-            <label htmlFor="beds" className="block text-sm font-medium text-gray-700">Number of Beds</label>
+            <label htmlFor="beds" className="block text-sm font-medium text-[#665429]">Number of Beds</label>
             <input
               type="number"
               name="beds"
@@ -109,7 +109,7 @@ const AddRoomTable = () => {
             { name: 'furnished', label: 'Furnished' },
           ].map((field, index) => (
             <div key={index}>
-              <label htmlFor={field.name} className="block text-sm font-medium text-gray-700">{field.label}</label>
+              <label htmlFor={field.name} className="block text-sm font-medium text-[#665429]">{field.label}</label>
               <select
                 name={field.name}
                 value={roomData[field.name]}
@@ -124,7 +124,7 @@ const AddRoomTable = () => {
           ))}
 
           <div>
-            <label htmlFor="remarks" className="block text-sm font-medium text-gray-700">Remarks</label>
+            <label htmlFor="remarks" className="block text-sm font-medium text-[#665429]">Remarks</label>
             <textarea
               name="remarks"
               value={roomData.remarks}
@@ -135,7 +135,7 @@ const AddRoomTable = () => {
           </div>
 
           <div>
-            <label htmlFor="attachments" className="block text-sm font-medium text-gray-700">Attachments</label>
+            <label htmlFor="attachments" className="block text-sm font-medium text-[#665429]">Attachments</label>
             <input
               type="file"
               name="attachments"

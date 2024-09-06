@@ -1,4 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
+}
+button{
+    background-color: #997d3d !important;
+}
+
+#link:hover{
+  background-color: rgb(224, 222, 222) !important;
+}
+#expense-button{
+    background-color: #f0e5e5 !important;
+}
+#expense-dropdown{
+    background-color: #f0f0f0 !important;
+}
+#expense-dropdown:hover{
+    background-color: #f0f0f0 !important;
+}
+#hamburger{
+    background-color: #f0f0f0 !important;
+}
+#epat{
+    background-color: #f0f0f0 !important;
+}

@@ -60,31 +60,31 @@ const AddHostelForm = () => {
         {/* Form fields go here */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Hostel Name</label>
+            <label className="block text-[#665429] font-semibold mb-2">Hostel Name</label>
             <input type="text" name="hostelName" value={formData.hostelName} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Enter hostel name" required />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Landline Number</label>
+            <label className="block text-[#665429] font-semibold mb-2">Landline Number</label>
             <input type="text" name="landlineNumber" value={formData.landlineNumber} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Enter landline number" required />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Mobile Number</label>
+            <label className="block text-[#665429] font-semibold mb-2">Mobile Number</label>
             <input type="text" name="mobileNumber" value={formData.mobileNumber} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Enter mobile number" required />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Google Map Address</label>
+            <label className="block text-[#665429] font-semibold mb-2">Google Map Address</label>
             <input type="text" name="googleMapAddress" value={formData.googleMapAddress} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Enter Google Map Address" required />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Website Address</label>
+            <label className="block text-[#665429] font-semibold mb-2">Website Address</label>
             <input type="text" name="websiteAddress" value={formData.websiteAddress} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Enter website address" required />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Social Media</label>
+            <label className="block text-[#665429] font-semibold mb-2">Social Media</label>
             <input type="text" name="socialMedia" value={formData.socialMedia} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Enter social media" />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Hostel For</label>
+            <label className="block text-[#665429] font-semibold mb-2">Hostel For</label>
             <div className="flex items-center">
               <label className="mr-4">
                 <input type="radio" name="hostelFor" value="male" checked={formData.hostelFor === 'male'} onChange={handleChange} required /> Male
@@ -98,33 +98,33 @@ const AddHostelForm = () => {
             </div>
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Address</label>
+            <label className="block text-[#665429] font-semibold mb-2">Address</label>
             <input type="text" name="address" value={formData.address} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Enter address" required />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Email</label>
+            <label className="block text-[#665429] font-semibold mb-2">Email</label>
             <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Enter email" required />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Attachments</label>
+            <label className="block text-[#665429] font-semibold mb-2">Attachments</label>
             <input type="file" name="attachments" onChange={handleChange} className="w-full border border-gray-300 rounded-lg" />
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Select Admin</label>
+            <label className="block text-[#665429] font-semibold mb-2">Select Admin</label>
             <select name="admin" value={formData.admin} onChange={handleChange} className="w-full border border-gray-300 rounded-lg">
               <option value="Admin 1">Admin 1</option>
               <option value="Admin 2">Admin 2</option>
             </select>
           </div>
           <div>
-            <label className="block text-gray-800 font-semibold mb-2">Select Warden</label>
+            <label className="block text-[#665429] font-semibold mb-2">Select Warden</label>
             <select name="warden" value={formData.warden} onChange={handleChange} className="w-full border border-gray-300 rounded-lg">
               <option value="Warden 1">Warden 1</option>
               <option value="Warden 2">Warden 2</option>
             </select>
           </div>
         </div>
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200" onSubmit={handleSubmit}>Add Hostel</button>
+        <button type="submit" className=" text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200" onSubmit={handleSubmit}>Add Hostel</button>
       </form>
     </div>
   );

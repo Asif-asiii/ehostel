@@ -29,65 +29,74 @@ const StockStatusesForm = () => {
       <h2 className="text-2xl font-bold text-center mb-6">Stock Statuses</h2>
       
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Item Name */}
-        <div>
-          <label className="block text-sm font-medium">Item Name</label>
-          <input 
-            type="text" 
-            name="itemName" 
-            value={stockData.itemName} 
-            onChange={handleChange} 
-            className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
-            placeholder="Enter item name" 
-            required 
-          />
-        </div>
 
-        {/* Category */}
-        <div>
-          <label className="block text-sm font-medium">Category</label>
-          <input 
-            type="text" 
-            name="category" 
-            value={stockData.category} 
-            onChange={handleChange} 
-            className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
-            placeholder="Enter category" 
-            required 
-          />
-        </div>
+       {/* item name and category parent div */}
+       <div className='flex justify gap-20'> 
+       {/* Item Name */}
+       <div>
+       <label className="block text-sm font-medium">Item Name</label>
+       <input 
+         type="text" 
+         name="itemName" 
+         value={stockData.itemName} 
+         onChange={handleChange} 
+         className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
+         placeholder="Enter item name" 
+         required 
+       />
+     </div>
 
-        {/* Quantity */}
-        <div>
-          <label className="block text-sm font-medium">Quantity</label>
-          <input 
-            type="number" 
-            name="quantity" 
-            value={stockData.quantity} 
-            onChange={handleChange} 
-            className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
-            placeholder="Enter quantity" 
-            required 
-          />
-        </div>
+     {/* Category */}
+     <div>
+       <label className="block text-sm font-medium">Category</label>
+       <input 
+         type="text" 
+         name="category" 
+         value={stockData.category} 
+         onChange={handleChange} 
+         className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
+         placeholder="Enter category" 
+         required 
+       />
+     </div>
+       </div>
+        
 
-        {/* Unit of Measure */}
+       {/* quantity and unit of measure parent div */}
+       <div className='flex justify gap-20'>
+          {/* Quantity */}
         <div>
-          <label className="block text-sm font-medium">Unit of Measure</label>
-          <select 
-            name="unitOfMeasure" 
-            value={stockData.unitOfMeasure} 
-            onChange={handleChange} 
-            className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
-            required
-          >
-            <option value="">Select Unit</option>
-            <option value="kg">Kilogram</option>
-            <option value="liter">Liter</option>
-            <option value="piece">Piece</option>
-            <option value="box">Box</option>
-          </select>
-        </div>
+        <label className="block text-sm font-medium">Quantity</label>
+        <input 
+          type="number" 
+          name="quantity" 
+          value={stockData.quantity} 
+          onChange={handleChange} 
+          className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
+          placeholder="Enter quantity" 
+          required 
+        />
+      </div>
+
+      {/* Unit of Measure */}
+      <div>
+        <label className="block text-sm font-medium">Unit of Measure</label>
+        <select 
+          name="unitOfMeasure" 
+          value={stockData.unitOfMeasure} 
+          onChange={handleChange} 
+          className="mt-1 w-full p-2 border border-gray-300 rounded-md" 
+          required
+        >
+          <option value="">Select Unit</option>
+          <option value="kg">Kilogram</option>
+          <option value="liter">Liter</option>
+          <option value="piece">Piece</option>
+          <option value="box">Box</option>
+        </select>
+      </div>
+       </div>
+       
 
         {/* Stock Status */}
         <div>
@@ -129,6 +138,7 @@ const StockStatusesForm = () => {
           </div>
         </div>
 
+       
         {/* Supplier */}
         <div>
           <label className="block text-sm font-medium">Supplier</label>

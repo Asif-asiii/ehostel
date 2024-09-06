@@ -44,7 +44,7 @@ const RoomTable = () => {
                   <img src={room.image} alt="Room" className="w-16 h-16 object-cover rounded" />
                 </td>
                 <td className="py-3 px-6 text-center">
-                  <button className="bg-blue-500 text-white py-1 px-3 rounded mr-2 hover:bg-blue-600">
+                  <button className=" text-white py-1 px-3 rounded mr-2 hover:bg-blue-600">
                     Edit
                   </button>
                   <button className="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600">
