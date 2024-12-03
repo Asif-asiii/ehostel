@@ -49,5 +49,26 @@ module.exports = {
             total += services[i].servicePrice;
         }
         return total;
+    },
+
+    // Custom helper for checking if an element is in an array
+    ifInArray: function (element, array, options) {
+        return (array.indexOf(element) > -1) ? options.fn(this) : options.inverse(this);
+    },
+
+    // Helper to check if a value is greater than a given number
+    isGreaterThan: function (a, b, options) {
+        return (a > b) ? options.fn(this) : options.inverse(this);
+    },
+
+    // Helper to calculate percentage
+    calculatePercentage: function (part, total) {
+        if (total === 0) return 0;
+        return ((part / total) * 100).toFixed(2); // returns a percentage with 2 decimal places
+    },
+
+    // Format currency with optional currency symbol
+    formatCurrency: function (value, symbol = '₹') {
+        return `${symbol}${parseFloat(value).toFixed(2)}`; // formats the value as a currency with 2 decimal places
     }
 };
